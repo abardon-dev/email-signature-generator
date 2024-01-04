@@ -1,0 +1,51 @@
+{
+  "env": {
+    "browser": true,
+    "es2023": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": true,
+    "tsconfigRootDir": "__dirname",
+    "ecmaVersion": 2023,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "root": true,
+  "rules": {
+    "prettier/prettier": "error",
+    "react/no-deprecated": "warn",
+    "object-shorthand": "warn",
+    "array-callback-return": "error",
+    "prefer-template": "warn",
+    "no-eval": "error",
+    "no-useless-escape": "error",
+    "no-loop-func": "error",
+    "prefer-rest-params": "error",
+    "no-param-reassign": "error",
+    "prefer-arrow-callback": "error",
+    "arrow-body-style": "error",
+    "no-confusing-arrow": "warn",
+    "no-useless-constructor": "error",
+    "no-dupe-class-members": "error",
+    "no-duplicate-imports": "error",
+    "no-restricted-syntax": ["warn", "ForInStatement"],
+    "dot-notation": "warn",
+    "eqeqeq": "error",
+    "no-nested-ternary": "error",
+    "no-unneeded-ternary": "error",
+    "no-else-return": "error",
+    "camelcase": "error",
+    "new-cap": "error",
+    "no-underscore-dangle": "error",
+    "curly": "error"
+  }
+}

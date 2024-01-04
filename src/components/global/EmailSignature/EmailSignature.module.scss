@@ -1,0 +1,77 @@
+.emailSignatureContainer {
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  min-width: 500px;
+  max-width: 600px;
+  aspect-ratio: 3/1;
+
+  .logoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    gap: 1rem;
+
+    img {
+      max-width: 70%;
+      height: auto;
+    }
+  }
+
+  .infoContainer {
+    padding: 2rem 0;
+    background-color: #5363f2;
+    border-radius: inherit;
+
+    :global(.MuiTypography-root) {
+      color: white;
+    }
+
+    .firstInfoContainer {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding-left: 1.5rem;
+      padding-right: 0.5rem;
+      overflow: hidden;
+
+      a {
+        background-color: white;
+      }
+
+      svg {
+        color: #5363f2;
+      }
+    }
+
+    .firstInfoContainer::after {
+      content: '';
+      position: absolute;
+      background-color: rgba(#fff, 0.3);
+      height: 100%;
+      width: 1px;
+      right: 0;
+    }
+
+    .secondInfoContainer {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding-right: 1.5rem;
+      padding-left: 0.5rem;
+      overflow: hidden;
+
+      .detail {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      svg {
+        color: white;
+      }
+    }
+  }
+}

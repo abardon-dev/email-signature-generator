@@ -1,0 +1,105 @@
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.75;
+  }
+}
+
+@keyframes shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.emptyDropzoneContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 0.5rem;
+
+  .dropIndicationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .orDividerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    width: 80%;
+
+    .line {
+      height: 1px;
+      border-top: 1px solid black;
+      flex-grow: 2;
+    }
+  }
+
+  :global(.MuiSvgIcon-root) {
+    height: 25%;
+    width: auto;
+    color: #535878;
+
+    &.zoom {
+      animation: zoomIn 0.5s forwards;
+    }
+  }
+}
+
+.filledDropzoneContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 0.5rem;
+
+  &.zoomOutAndShake {
+    animation:
+      zoomOut 0.3s forwards,
+      shaking 0.3s infinite;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .pictogram {
+    height: 30%;
+    width: auto;
+  }
+}

@@ -1,0 +1,14 @@
+.dropzone {
+  width: 100%;
+  height: 250px;
+  border-radius: 1.25rem;
+  padding: 1rem 1.5rem;
+  border: 2px dashed #535878;
+  background-color: whitesmoke;
+}
+
+.rulesDescription {
+  &:global(.MuiTypography-root) {
+    font-size: 0.75rem;
+  }
+}

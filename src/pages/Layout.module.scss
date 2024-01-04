@@ -1,0 +1,7 @@
+$layout-padding: 2rem;
+
+.layout {
+  width: calc(100vw - 2 * $layout-padding);
+  min-height: calc(100vh - 2 * $layout-padding);
+  padding: $layout-padding;
+}
