@@ -1,32 +1,73 @@
-//TODO:
+# Email Signature Generator
 
-# React + TypeScript + Vite
+#### _Real-time preview email signature generator_
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How to run
 
-Currently, two official plugins are available:
+> **Using your favorite package manager**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### _Dev mode_
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname
-  }
-};
+```
+git clone https://github.com/abardon-dev/email-signature-generator
+pnpm install
+pnpm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+#### _Production-like mode_
+
+```
+git clone https://github.com/abardon-dev/email-signature-generator
+pnpm install
+pnpm run build
+pnpm run preview
+```
+
+## Tech stack 💻
+
+That is the list of technologies that Email Signature Generator use.
+
+> **Front**
+>
+> > - [React](https://react.dev/)
+> > - [Vite](https://vitejs.dev/)
+> > - [TypeScript](https://www.typescriptlang.org/)
+> > - [MUI](https://mui.com/)
+> > - [React-hook-form](https://react-hook-form.com/)
+> > - [Zod](https://zod.dev/)
+> > - [idb](https://www.npmjs.com/package/idb)
+> > - [libphonenumer-js](https://www.npmjs.com/package/libphonenumber-js)
+> > - [Prettier](https://prettier.io/)
+> > - [EsLint](https://eslint.org/)
+> > - [React-hot-toast](https://react-hot-toast.com/)
+
+> **Tools**
+>
+> > - [ChatGPT](https://chat.openai.com/)
+> > - [VSCode](https://code.visualstudio.com/)
+> > - [Fork](https://git-fork.com/)
+
+## File Structure 🗃️
+
+> 📁 _public_ : Images, fonts, icons
+> 📁 _src_ : Source code
+>
+> > - 📁 _src/components_ : Reusable components
+> > - 📁 _src/pages_ : Pages (use some components to build pages)
+> > - 📁 _src/api_ : Communication with IndexedDB
+> > - 📁 _src/routes_ : Application routes
+> > - 📁 _src/styles_ : Global styles
+> > - 📁 _src/appTypes_ : Types, interfaces and Zod schema
+> > - 📁 _src/utils_ : Global helpers
+
+## Pages 🗐️
+
+> **Home -> /**
+
+> **Create signature -> /create**
+>
+> > Form to build a new signature while having the real-time preview
+
+> **Signature list -> /list**
+>
+> > All your saved signatures
